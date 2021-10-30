@@ -59,6 +59,10 @@ public class Donate extends Base {
             }
         });
 
+        progressBar.setProgress(app.totalDonated);
+        String totalDonatedStr = "$" + app.totalDonated;
+        amountTotal.setText(totalDonatedStr);
+
     }
 
     @Override
@@ -104,6 +108,7 @@ public class Donate extends Base {
         app.totalDonated = 0;
         amountTotal.setText("$" + app.totalDonated);
         amountText.setText("");
+        progressBar.setProgress(0);
     }
 
 
